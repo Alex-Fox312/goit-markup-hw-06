@@ -57,6 +57,9 @@ img {
   width: 1158px;
 }
 
+.solid-menu{
+  display: none;
+}
 
 /** header **/
 
@@ -670,6 +673,7 @@ svg.footer-icon {
 }
 
 .form-block {
+  display: none;
   width: 100%;
   height: 100%;
   background: var(--NAVY-BLUE-modal, rgba(46, 47, 66, 0.40));
@@ -1033,7 +1037,7 @@ letter-spacing: 0.04em;
     max-height: 100%;
     padding: 72px 16px 168px 16px;
     z-index: 5;
-    display: flex;
+    display: none;
     flex-direction: column;
     left: 0%;
     top: 50%;
@@ -1043,7 +1047,8 @@ letter-spacing: 0.04em;
   }
 
   .mini-menu {
-    width: 320px;
+    min-width: 320px;
+    max-width: 100%;
     height: 640px;
     margin: 0;
   }
@@ -1056,36 +1061,64 @@ letter-spacing: 0.04em;
     letter-spacing: 0.72px;
     text-transform: capitalize;
     margin-bottom: 40px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
   }
 
   .mini-menu:last-child {
     margin-bottom: 128px;
   }
 
+
+
+  a.mini-contact {
+    color:var(--SLATE, #434455);
+  }
   .mini-punkt-a.one{
     color: var(--OCEAN, #404BBF);
   }
 
-  .mini-contact-block {
-    color: var(--SLATE, #434455);
-    font-size: 20px;
-    font-weight: 500;
-    line-height: 24px;
-    letter-spacing: 0.4px;
-  }
-  
-
-  a.mini-contact {
-    color:var(--SLATE, #434455);
-    margin-top: 24px;
+  .mini-punkt-a:hover,
+  .mini-punkt-a:active,
+  .mini-punkt-a:focus,
+  .mini-contact:hover,
+  .mini-contact:active,
+  .mini-contact:focus {
+    color: var(--OCEAN, #404BBF);
   }
 
-  a.mini-contact.mail {
-    margin-top: 24px;
+  .mini-contact.one {
+    margin-bottom: 24px;
+    display: block;
   }
 
   .mini-list {
     padding-top: 48px;
   }
 
+  .mini-contact-block {
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 24px; 
+    letter-spacing: 0.4px;
+    margin-top: 168px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .mini-contact-block:last-child {
+    padding: 24px;
+  }
+
+  .mini-icon {
+    margin-right: 16px;
+  }
+
+  .mini-icon:last-child {
+    margin-right: 0;
+  }
+
+}
+
+.is-open {
+  display: flex;
 }
