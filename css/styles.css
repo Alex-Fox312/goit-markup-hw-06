@@ -114,7 +114,7 @@ img {
   }
 
   .header {
-    position: fixed;
+    position: relative;
     width: 100%;
     z-index: 1;
     border-bottom: 1px solid var(--CORNFLOWER, #e7e9fc);
@@ -212,6 +212,7 @@ img {
 
   .inform-li {
     display: block;
+    margin-bottom: 72px;
   }
 
   .inform-li h3 {
@@ -264,6 +265,7 @@ img {
     box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
       0px 1px 1px 0px rgba(46, 47, 66, 0.16),
       0px 1px 6px 0px rgba(46, 47, 66, 0.08);
+      margin-bottom: 72px;
   }
 
   .team-text {
@@ -340,6 +342,7 @@ img {
   .portfolio-card {
     border: 1px solid var(--CORNFLOWER, #e7e9fc);
     transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    width: 100%;
   }
 
   .portfolio-text {
@@ -347,6 +350,14 @@ img {
     border: 1px solid #e7e9fc;
     border-top: none;
   }
+
+.img-pc {
+  display: none;
+}
+
+.img-tel {
+  display: block;
+}
 
   /** card transform  **/
 
@@ -549,8 +560,17 @@ img {
   }
 
   .footer-logo {
-    margin-right: 24px;
     padding-bottom: 72px;
+  }
+
+  .footer-web {
+    display: flex;
+    justify-content: center;
+  }
+
+  .social-footer {
+    margin-bottom: 72px;
+    width: 100%;
   }
 
   /** formated **/
@@ -695,6 +715,14 @@ img {
     height: 100%;
   }
 
+  .img-pc {
+    display: block;
+  }
+
+  .img-tel {
+    display: none;
+  }
+
   .solid-menu-button {
     display: none;
   }
@@ -728,6 +756,7 @@ img {
 
   .contact_block {
     display: flex;
+    font-size: 16px;
   }
 
   /**************** inform ***************/
@@ -878,7 +907,6 @@ img {
   padding: 72px 24px 24px 24px;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -899,7 +927,7 @@ img {
 .case-form {
   display: block;
   width: 100%;
-  padding-top: 4px;
+  padding-top: 8px;
   color: var(--LIGHT-SLATE, #8e8f99);
   font-size: 12px;
   font-weight: 400;
